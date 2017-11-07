@@ -1,0 +1,29 @@
+{
+  "name": "buzzles",
+  "version": "1.0.0",
+  "description": "An app to let kids explore different activities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "buzzles",
+    "classes",
+    "business"
+  ],
+  "author": "Jakub Baron",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-loader": "^5.3.3",
+    "react": "^16.0.0",
+    "react-big-calendar": "^0.17.0",
+    "react-dom": "^16.0.0",
+    "webpack": "^1.15.0"
+  },
+  "dependencies": {
+    "babel-loader": "^5.3.3",
+    "react": "^16.0.0",
+    "react-big-calendar": "^0.17.0",
+    "react-dom": "^16.0.0"
+  }
+}
