@@ -4,12 +4,13 @@ class Header extends Component {
   render() {
     return (
       <div>
+        <h3>{this.props.headerText}</h3>
       </div>
     )
   }
 }
 
 Header.propTypes = {
-  text: React.PropTypes.object.isRequired
+  headerText: React.PropTypes.object.isRequired
 }
 export default Header;
