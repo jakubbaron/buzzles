@@ -1,3 +1,34 @@
+Activity:
+-sample of the image activity
+-description
+-available time
+-who is organising
+-address
+-contact deets
+++enroll button
+++review button
+===available slot(tbd later)
+===coords(to filter by whereabouts)
+
+Activity -> {
+  id: unique ID
+  name: string,
+  description: string,
+  image: string(-> need to find out how to store images in db)
+  availableTime: object, Date
+  organiser: object, Organiser
+  address: object, Address
+  contact: object, Contact
+  tags: string[]
+
+  coordX: double, (not sure if we need those if we have addres, this might be just for nicer lookup in db)
+  coordY: double,
+  availableSlots: int(string?)
+}
+
+
+
+
 User webpage:
 -login page(this can be fake for now, no need to validate password)
   +user database
