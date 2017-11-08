@@ -1,0 +1,24 @@
+User webpage:
+-login page(this can be fake for now, no need to validate password)
+  +user database
+  +forgot password(can be later)
+  +TODO: describe it further, first get the app working, then worry about the users x)
+-courses list view:
+  +list of courses around you
+-course view:
+  +price
+  +times
+  +description
+  +reviews
+  ++your friends did it(when social network gets introducted, phase 3)
+
+User profile:
+-family profile?
+  +kid profile
+  +parent profile
+
+Business webpage:
+-list of your offered classes
+-ability to add more classes
+-how many people are signed up for the class
+-revenue from each class

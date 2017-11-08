@@ -1,39 +1,26 @@
 Phase 1:
 Get User View working with mock events from the Vendors
+Milestones:
+-> Single event detailed view
+-> List of events with short description/photo
+-> Mock sign up for the event 
 
 Phase 2:
 Get Vendor View working, allowing them to enter new events
+  As from Phase 1 we would have completed single and list of events
+  we could use it here but the vendors have access to modify their events
+
+Milestones:
+->Adding a new event
+->Modify an event while being in a detailed view
 
 Phase 3:
 Add summarize view for the Vendors, to allow them to manage their
 classes
+  Create extra views for Vendors where they can see how much money
+  they've made on each class
+  Summarize all revenue from all the classes
 
 Phase 4:
 Social networks - allow people to see what their friends did,
 Allow kids to sign up
-
-
-User webpage:
--login page(this can be fake for now, no need to validate password)
-  +user database
-  +forgot password(can be later)
-  +TODO: describe it further, first get the app working, then worry about the users x)
--courses list view:
-  +list of courses around you
--course view:
-  +price
-  +times
-  +description
-  +reviews
-  ++your friends did it(when social network gets introducted, phase 3)
-
-User profile:
--family profile?
-  +kid profile
-  +parent profile
-
-Business webpage:
--list of your offered classes
--ability to add more classes
--how many people are signed up for the class
--revenue from each class
