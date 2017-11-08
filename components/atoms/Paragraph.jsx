@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Paragraph extends Component {
   render() {
@@ -10,7 +11,7 @@ class Paragraph extends Component {
 }
 
 Paragraph.propTypes = {
-  text: React.PropTypes.object.isRequired
+  text: PropTypes.string.isRequired,
 }
 
-export default Paragraph;ś
+export default Paragraph;

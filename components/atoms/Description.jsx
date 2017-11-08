@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Description extends Component {
   render() {
@@ -11,7 +12,7 @@ class Description extends Component {
 }
 
 Description.propTypes = {
-  text: React.PropTypes.object.isRequired
+  text: PropTypes.string.isRequired
 }
 
 export default Description;

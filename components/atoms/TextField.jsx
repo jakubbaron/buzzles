@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class TextField extends Component {
   render() {
@@ -10,7 +11,7 @@ class TextField extends Component {
 }
 
 TextField.propTypes = {
-  hint: React.PropTypes.object
-}
+  hint: PropTypes.string,
+};
 
 export default TextField;
