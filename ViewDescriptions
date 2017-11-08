@@ -1,0 +1,10 @@
+User profile:
+-family profile?
+  +kid profile
+  +parent profile
+
+Business webpage:
+-list of your offered classes
+-ability to add more classes
+-how many people are signed up for the class
+-revenue from each class
