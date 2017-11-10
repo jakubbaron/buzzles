@@ -3,7 +3,7 @@ import Description from '../atoms'
 import Image from '../atoms'
 import Header from '../atoms'
 
-class Activity extends Component {
+class DetailedActivity extends Component {
   render() {
     return (
       <div>
@@ -18,9 +18,9 @@ class Activity extends Component {
   }
 }
 
-Activity.propTypes = {
+DetailedActivity.propTypes = {
   headerText: React.PropTypes.object.isRequired,
   imageSource: React.PropTypes.object.isRequired,
   description: React.PropTypes.object.isRequired
 }
-export default Activity;
+export default DetailedActivity;

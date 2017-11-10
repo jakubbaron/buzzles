@@ -15,8 +15,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <p>Hello from react</p>
-        <Button onClick={this.alerting} {...this.state}/>
       </div>
     )
   }
