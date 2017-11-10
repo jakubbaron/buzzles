@@ -1,0 +1,119 @@
+/* ------------------------------------------ */
+/* BASIC SETUP */
+/* ------------------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Lato', 'Arial', 'sans-serif';
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+
+
+/* ------------------------------------------ */
+/* REUSABLE COMPONENTS */
+/* ------------------------------------------ */
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* --------------------- HEADINGS --------------------- */
+
+h1 {
+  font-family: 'Gloria Hallelujah', cursive;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 500%;
+  font-weight: 300;
+  /* text-transform: uppercase; */
+  letter-spacing: 1px;
+  word-spacing: 3px;
+}
+
+/* --------------------- BUTTONS --------------------- */
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: #26C6DA; */
+  border-radius: 200px;
+  width: 70%;
+  max-width: 300px;
+  text-align: center;
+  transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: #26C6DA;
+  border: 1px solid #26C6DA;
+  color: #fff;
+  margin-top:20px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #26C6DA;
+  color:#26C6DA;
+  margin-top: 20px;
+}
+
+.btn:hover,
+.btn:active {
+  background-color:#00ACC1;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  background-color:#00ACC1;
+  border: 1px solid #00ACC1;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  border: 1px solid #00ACC1;
+  color: #fff;
+}
+
+
+/* ------------------------------------------ */
+/* HEADER */
+/* ------------------------------------------ */
+
+header {
+  background-color: #FFF8E1;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+ }
+ footer {
+   background-color: #FFE082;
+ }
+ 
+ .buzzles-text-box {
+   position: absolute;
+   /* width: 1140px; */
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%); 
+ 
+ }
