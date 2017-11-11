@@ -15,6 +15,7 @@ html {
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
+  background-color: #FFF8E1;
 }
 
 
@@ -103,11 +104,9 @@ header {
   background-color: #FFF8E1;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  /* height: 90vh; */
  }
- footer {
-   background-color: #FFE082;
- }
+
  
  .buzzles-text-box {
    position: absolute;
@@ -117,3 +116,31 @@ header {
    transform: translate(-50%, -50%); 
  
  }
+
+/* ------------------------------------------ */
+/* FOOTER */
+/* ------------------------------------------ */
+footer {
+  background-color: #FFE082;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.main-nav {
+  /* float: center; */
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80%;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.main-nav li a {
+  text-decoration: none;
+  color: rgb(131, 131, 131);
+}
