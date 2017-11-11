@@ -52,33 +52,13 @@ class App extends Component {
             <a href="#" className="btn btn-ghost">Sing Up!</a>
           </div>
         </header>
+
+
         <footer>
           <MuiThemeProvider muiTheme={muiTheme}>
             <MenuBar />
           </MuiThemeProvider>
         </footer>
-
-        {/* <footer>
-        <nav>
-          <div className="row">
-            <ul className="main-nav">
-              <li>
-                <a href="#">
-                  Discover</a>
-              </li>
-              <li>
-                <a href="#">Search</a>
-              </li>
-              <li>
-                <a href="#">Subscriptions</a>
-              </li>
-              <li>
-                <a href="#">Profile</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </footer> */}
       </div>
     )
   }
