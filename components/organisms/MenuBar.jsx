@@ -8,11 +8,8 @@ import IconBookmarkBorder from 'material-ui/svg-icons/action/bookmark-border';
 import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
 import IconSearch from 'material-ui/svg-icons/action/search';
 import IconPermIdentity from 'material-ui/svg-icons/action/perm-identity';
-<<<<<<< HEAD
-=======
 import { withRouter } from 'react-router-dom';
 
->>>>>>> router
 class MenuBar extends Component {
   constructor(props) {
     super(props);
