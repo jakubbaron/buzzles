@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
-import FontIcon from 'material-ui/FontIcon';
-import { BottomNavigation, BottomNavigationItem } from 'material-ui/BottomNavigation';
+import {
+  BottomNavigation,
+  BottomNavigationItem
+} from 'material-ui/BottomNavigation';
 import Paper from 'material-ui/Paper';
+import IconBookmarkBorder from 'material-ui/svg-icons/action/bookmark-border';
 import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
 import IconSearch from 'material-ui/svg-icons/action/search';
-import IconBookmarkBorder from 'material-ui/svg-icons/action/bookmark-border';
 import IconPermIdentity from 'material-ui/svg-icons/action/perm-identity';
-import Badge from 'material-ui/Badge';
+import { withRouter } from 'react-router-dom';
 
 class MenuBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
       selectedIndex: 0,
+      selectedText: '/discover'
     };
 
   }
-  select(index) {
-    this.setState({ selectedIndex: index });
+  select(index, text) {
+    this.setState({ selectedIndex: index, selectedText: text });
+    this.props.history.push(text);
   }
   render() {
     const profileIcon = <IconPermIdentity />;
@@ -25,32 +29,34 @@ class MenuBar extends Component {
     const searchIcon = <IconSearch />;
     const bookmarkIcon = <IconBookmarkBorder />;
     return (
-      <Paper zDepth={1}>
-        <BottomNavigation selectedIndex={this.state.selectedIndex}>
-          <BottomNavigationItem
-            label="Discover"
-            icon={nearbyIcon}
-            onClick={() => this.select(0)}
-          />
-          <BottomNavigationItem
-            label="Search"
-            icon={searchIcon}
-            onClick={() => this.select(1)}
-          />
-          <BottomNavigationItem
-            label="Subscriptions"
-            icon={bookmarkIcon}
-            onClick={() => this.select(2)}
-          />
-          <BottomNavigationItem
-            label="Profile"
-            icon={profileIcon}
-            onClick={() => this.select(3)}
-          />
-        </BottomNavigation>
-      </Paper>
+      <div>
+        <Paper zDepth={1}>
+          <BottomNavigation selectedIndex={this.state.selectedIndex}>
+            <BottomNavigationItem
+              label="Discover"
+              icon={nearbyIcon}
+              onClick={() => this.select(0, '/discover')}
+            />
+            <BottomNavigationItem
+              label="Search"
+              icon={searchIcon}
+              onClick={() => this.select(1, '/search')}
+            />
+            <BottomNavigationItem
+              label="Subscriptions"
+              icon={bookmarkIcon}
+              onClick={() => this.select(2, '/subscriptions')}
+            />
+            <BottomNavigationItem
+              label="Profile"
+              icon={profileIcon}
+              onClick={() => this.select(3, '/profile')}
+            />
+          </BottomNavigation>
+        </Paper>
+      </div>
     );
   }
 }
 
-export default MenuBar;
+export default withRouter(MenuBar);

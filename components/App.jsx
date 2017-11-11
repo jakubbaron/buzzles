@@ -51,40 +51,8 @@ class App extends Component {
         <div>
           <footer>
             <MuiThemeProvider muiTheme={muiTheme}>
-              <Paper zDepth={1}>
-                <BottomNavigation selectedIndex={this.state.selectedIndex}>
-                  <Link to="/discover">
-                    <BottomNavigationItem
-                      label="Discover"
-                      icon={nearbyIcon}
-                      onClick={() => this.select(0)}
-                    />
-                  </Link>
-                  <Link to="/search">
-                    <BottomNavigationItem
-                      label="Search"
-                      icon={searchIcon}
-                      onClick={() => this.select(1)}
-                    />
-                  </Link>
-                  <Link to="/subscriptions">
-                    <BottomNavigationItem
-                      label="Subscriptions"
-                      icon={bookmarkIcon}
-                      onClick={() => this.select(2)}
-                    />
-                  </Link>
-                  <Link to="/profile" >
-                    <BottomNavigationItem
-                      label="Profile"
-                      icon={profileIcon}
-                      onClick={() => this.select(3)}
-                    />
-                  </Link>
-                </BottomNavigation>
-              </Paper>
+              <MenuBar />
             </MuiThemeProvider>
-
           </footer>
           <Route exact path="/" component={Discover} />
           <Route path="/discover" component={Discover} />
@@ -92,6 +60,7 @@ class App extends Component {
           <Route path="/subscriptions" component={Subscriptions} />
           <Route path="/profile" component={Profile} />
         </div>
+
       </Router >
     );
   }
