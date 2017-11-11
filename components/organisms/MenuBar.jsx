@@ -6,8 +6,6 @@ import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
 import IconSearch from 'material-ui/svg-icons/action/search';
 import IconBookmarkBorder from 'material-ui/svg-icons/action/bookmark-border';
 import IconPermIdentity from 'material-ui/svg-icons/action/perm-identity';
-import Badge from 'material-ui/Badge';
-
 class MenuBar extends Component {
   constructor(props) {
     super(props);
