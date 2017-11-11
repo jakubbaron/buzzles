@@ -3,17 +3,9 @@ import MenuBar from './organisms/MenuBar.jsx';
 import { white, white500, amber200, grey700 } from 'material-ui/styles/colors'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import LoginDialog from './organisms/LoginDialog.jsx';
-import { BottomNavigation, BottomNavigationItem } from 'material-ui/BottomNavigation';
-import Paper from 'material-ui/Paper';
-import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
-import IconSearch from 'material-ui/svg-icons/action/search';
-import IconBookmarkBorder from 'material-ui/svg-icons/action/bookmark-border';
-import IconPermIdentity from 'material-ui/svg-icons/action/perm-identity';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 import Discover from './pages/Discover.jsx';
 import Profile from './pages/Profile.jsx';
@@ -38,10 +30,6 @@ class App extends Component {
         height: 100,
       },
     });
-    const profileIcon = <IconPermIdentity />;
-    const nearbyIcon = <IconLocationOn />;
-    const searchIcon = <IconSearch />;
-    const bookmarkIcon = <IconBookmarkBorder />;
     return (
       <Router>
         <div>

@@ -23,6 +23,7 @@ class MenuBar extends Component {
     this.setState({ selectedIndex: index, selectedText: text });
     this.props.history.push(text);
   }
+
   render() {
     const profileIcon = <IconPermIdentity />;
     const nearbyIcon = <IconLocationOn />;
