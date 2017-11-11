@@ -4,12 +4,33 @@ import { white, white500, amber200, grey700 } from 'material-ui/styles/colors'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import LoginDialog from './organisms/LoginDialog.jsx';
+import { BottomNavigation, BottomNavigationItem } from 'material-ui/BottomNavigation';
+import Paper from 'material-ui/Paper';
+import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
+import IconSearch from 'material-ui/svg-icons/action/search';
+import IconBookmarkBorder from 'material-ui/svg-icons/action/bookmark-border';
+import IconPermIdentity from 'material-ui/svg-icons/action/perm-identity';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
+import Discover from './pages/Discover.jsx';
+import Profile from './pages/Profile.jsx';
+import Search from './pages/Search.jsx';
+import Subscriptions from './pages/Subscriptions.jsx';
+
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    }
+      selectedIndex: 0,
+    };
+
+  }
+  select(index) {
+    this.setState({ selectedIndex: index });
   }
   render() {
     const muiTheme = getMuiTheme({
@@ -21,15 +42,58 @@ class App extends Component {
         height: 100,
       },
     });
+    const profileIcon = <IconPermIdentity />;
+    const nearbyIcon = <IconLocationOn />;
+    const searchIcon = <IconSearch />;
+    const bookmarkIcon = <IconBookmarkBorder />;
     return (
-      <div>
-        <footer>
-          <MuiThemeProvider muiTheme={muiTheme}>
-            <MenuBar />
-          </MuiThemeProvider>
-        </footer>
-      </div>
-    )
+      <Router>
+        <div>
+          <footer>
+            <MuiThemeProvider muiTheme={muiTheme}>
+              <Paper zDepth={1}>
+                <BottomNavigation selectedIndex={this.state.selectedIndex}>
+                  <Link to="/discover">
+                    <BottomNavigationItem
+                      label="Discover"
+                      icon={nearbyIcon}
+                      onClick={() => this.select(0)}
+                    />
+                  </Link>
+                  <Link to="/search">
+                    <BottomNavigationItem
+                      label="Search"
+                      icon={searchIcon}
+                      onClick={() => this.select(1)}
+                    />
+                  </Link>
+                  <Link to="/subscriptions">
+                    <BottomNavigationItem
+                      label="Subscriptions"
+                      icon={bookmarkIcon}
+                      onClick={() => this.select(2)}
+                    />
+                  </Link>
+                  <Link to="/profile" >
+                    <BottomNavigationItem
+                      label="Profile"
+                      icon={profileIcon}
+                      onClick={() => this.select(3)}
+                    />
+                  </Link>
+                </BottomNavigation>
+              </Paper>
+            </MuiThemeProvider>
+
+          </footer>
+          <Route exact path="/" component={Discover} />
+          <Route path="/discover" component={Discover} />
+          <Route path="/search" component={Search} />
+          <Route path="/subscriptions" component={Subscriptions} />
+          <Route path="/profile" component={Profile} />
+        </div>
+      </Router >
+    );
   }
 }
 
