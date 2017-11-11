@@ -9,12 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      events: [],
-      buttonText: "abcd"
     }
-  }
-  alerting(e) {
-    alert("clicked!");
   }
   render() {
     const muiTheme = getMuiTheme({
@@ -26,34 +21,8 @@ class App extends Component {
         height: 100,
       },
     });
-    const DialogTheme = getMuiTheme({
-      palette: {
-        textColor: grey700,
-        canvasColor: white500,
-      },
-      appBar: {
-        height: 100,
-      },
-    });
-    const buttons = [
-      { text: "Login" },
-      { text: "Cancel" },
-      { text: "Login" },
-    ]
-    const text = "Please enter your credentials";
     return (
       <div>
-        <header>
-          <div className="buzzles-text-box">
-            <h1>Buzzles!</h1>
-            <MuiThemeProvider muiTheme={DialogTheme}>
-              <LoginDialog buttons={buttons} text={text} />
-            </MuiThemeProvider>
-            <a href="#" className="btn btn-ghost">Sing Up!</a>
-          </div>
-        </header>
-
-
         <footer>
           <MuiThemeProvider muiTheme={muiTheme}>
             <MenuBar />
