@@ -25,12 +25,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedIndex: 0,
-    };
 
-  }
-  select(index) {
-    this.setState({ selectedIndex: index });
+    };
   }
   render() {
     const muiTheme = getMuiTheme({
