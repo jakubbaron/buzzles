@@ -4,17 +4,33 @@ import { white, white500, amber200, grey700 } from 'material-ui/styles/colors'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import LoginDialog from './organisms/LoginDialog.jsx';
+import { BottomNavigation, BottomNavigationItem } from 'material-ui/BottomNavigation';
+import Paper from 'material-ui/Paper';
+import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
+import IconSearch from 'material-ui/svg-icons/action/search';
+import IconBookmarkBorder from 'material-ui/svg-icons/action/bookmark-border';
+import IconPermIdentity from 'material-ui/svg-icons/action/perm-identity';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
+import Discover from './pages/Discover.jsx';
+import Profile from './pages/Profile.jsx';
+import Search from './pages/Search.jsx';
+import Subscriptions from './pages/Subscriptions.jsx';
+
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      events: [],
-      buttonText: "abcd"
-    }
+      selectedIndex: 0,
+    };
+
   }
-  alerting(e) {
-    alert("clicked!");
+  select(index) {
+    this.setState({ selectedIndex: index });
   }
   render() {
     const muiTheme = getMuiTheme({
@@ -26,41 +42,27 @@ class App extends Component {
         height: 100,
       },
     });
-    const DialogTheme = getMuiTheme({
-      palette: {
-        textColor: grey700,
-        canvasColor: white500,
-      },
-      appBar: {
-        height: 100,
-      },
-    });
-    const buttons = [
-      { text: "Login" },
-      { text: "Cancel" },
-      { text: "Login" },
-    ]
-    const text = "Please enter your credentials";
+    const profileIcon = <IconPermIdentity />;
+    const nearbyIcon = <IconLocationOn />;
+    const searchIcon = <IconSearch />;
+    const bookmarkIcon = <IconBookmarkBorder />;
     return (
-      <div>
-        <header>
-          <div className="buzzles-text-box">
-            <h1>Buzzles!</h1>
-            <MuiThemeProvider muiTheme={DialogTheme}>
-              <LoginDialog buttons={buttons} text={text} />
+      <Router>
+        <div>
+          <footer>
+            <MuiThemeProvider muiTheme={muiTheme}>
+              <MenuBar />
             </MuiThemeProvider>
-            <a href="#" className="btn btn-ghost">Sing Up!</a>
-          </div>
-        </header>
+          </footer>
+          <Route exact path="/" component={Discover} />
+          <Route path="/discover" component={Discover} />
+          <Route path="/search" component={Search} />
+          <Route path="/subscriptions" component={Subscriptions} />
+          <Route path="/profile" component={Profile} />
+        </div>
 
-
-        <footer>
-          <MuiThemeProvider muiTheme={muiTheme}>
-            <MenuBar />
-          </MuiThemeProvider>
-        </footer>
-      </div>
-    )
+      </Router >
+    );
   }
 }
 
