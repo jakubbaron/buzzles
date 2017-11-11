@@ -15,7 +15,6 @@ export default class LoginDialog extends React.Component {
     this.state = {
       open: false,
     };
-
   }
 
   handleOpen() {
@@ -27,32 +26,33 @@ export default class LoginDialog extends React.Component {
   };
 
   render() {
+    const { buttons } = this.props;
+    const { text } = this.props;
     // make a login window here
     const actions = [
       <FlatButton
-        label="Cancel"
+        label={buttons[1].text}
         primary={true}
         onClick={this.handleClose.bind(this)}
       />,
       <FlatButton
-        label="Submit"
+        label={buttons[2].text}
         primary={true}
-        keyboardFocused={true}
         onClick={this.handleClose.bind(this)}
       />,
     ];
 
     return (
       <div>
-        <a href="#" className="btn btn-full" onClick={this.handleOpen.bind(this)}>Login</a>
+        <a href="#" className="btn btn-full" onClick={this.handleOpen.bind(this)}>{buttons[0].text}</a>
         <Dialog
-          title="Dialog With Actions"
+          title={text}
           actions={actions}
           modal={false}
           open={this.state.open}
           onRequestClose={this.handleClose.bind(this)}
         >
-          The actions in this window were passed in as an array of React objects.
+
         </Dialog>
       </div>
     );
