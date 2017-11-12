@@ -3,11 +3,7 @@ import React, { Component } from 'react';
 import ListActivity from '../organisms/ListActivity.jsx';
 import HeaderSubpage from '../atoms/HeaderSubpage.jsx';
 import events from '../../mock_events.js';
-/*
-TODO:
--Make the contect only like 1100px wide, on the fullscreen it's obscure;
--Image in smaller screen becomes massive while it shouldn't
-*/
+
 class Discover extends Component {
   constructor(props) {
     super(props);
@@ -24,7 +20,7 @@ class Discover extends Component {
     return (
       <div className="padding">
         <div style={discoverStyle}>
-          <HeaderSubpage text={subpageName}/>
+          <HeaderSubpage text={subpageName} />
           <ListActivity {...this.state} />
         </div>
       </div>

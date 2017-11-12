@@ -5,9 +5,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import LoginDialog from '../organisms/LoginDialog.jsx';
 import HeaderSubpage from '../atoms/HeaderSubpage.jsx';
 
-/* TODOs
--investigate why this page is wider than other views
--create similar form for SignUp as for Login
+/* TODO: create similar form for SignUp as for Login
  */
 export default class Profile extends Component {
   render() {
@@ -31,13 +29,13 @@ export default class Profile extends Component {
     return (
       <div>
         <header>
-        <HeaderSubpage text={subpageName}/>          
+          <HeaderSubpage text={subpageName} />
           <div className="buzzles-text-box">
             <h1>Buzzles!</h1>
-              <MuiThemeProvider muiTheme={DialogTheme}>
-                <LoginDialog buttons={buttons} text={text} />
-              </MuiThemeProvider>
-              <a href="#" className="btn btn-ghost">Sing Up!</a>
+            <MuiThemeProvider muiTheme={DialogTheme}>
+              <LoginDialog buttons={buttons} text={text} />
+            </MuiThemeProvider>
+            <a href="#" className="btn btn-ghost">Sing Up!</a>
           </div>
         </header>
       </div>

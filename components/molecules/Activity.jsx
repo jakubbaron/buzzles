@@ -3,10 +3,6 @@ import Description from '../atoms/Description.jsx'
 import ImageWithCaption from '../molecules/ImageWithCaption.jsx';
 import PropTypes from 'prop-types';
 
-/*
-TODO:
--make the image smaller when displaying on the smaller screen, what's happening now it's freaking ridiculous
-*/
 class Activity extends Component {
   render() {
     const activityStyle = {
@@ -21,14 +17,14 @@ class Activity extends Component {
     };
 
     return (
-      
+
       <div className="padding" >
-        <div className="row vertical-align" 
+        <div className="row vertical-align"
           style={activityStyle}>
           <div className="col-xs-4 col-sm-4 col-md-offset-2 col-md-2 col-lg-offset-2 col-lg-2">
             <ImageWithCaption
               imageSource={imageSource}
-              headerText={name}/>
+              headerText={name} />
           </div>
           <div className="col-xs-8 col-sm-8 col-md-6 col-lg-6"
             style={descriptionStyle}>

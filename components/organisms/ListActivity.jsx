@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import Activity from '../molecules/Activity.jsx';
 
 import PropTypes from 'prop-types';
-/* TODO:
 
-*/
 class ListActivity extends Component {
   render() {
     const { activities } = this.props;

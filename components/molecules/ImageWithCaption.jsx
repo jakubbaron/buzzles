@@ -3,13 +3,15 @@ import Header from '../atoms/Header.jsx';
 import Image from '../atoms/Image.jsx';
 
 import PropTypes from 'prop-types';
-
+/*
+TODO: fix caption on smaller screen, it sucks ballzs
+*/
 class ImageWithCaption extends Component {
   render() {
-    const { 
+    const {
       imageSource,
       imageStyle,
-      headerText 
+      headerText
     } = this.props;
     const headerStyle = {
       position: 'absolute',
@@ -20,9 +22,9 @@ class ImageWithCaption extends Component {
     }
     return (
       <div>
-        <Image imageSource={imageSource}/>
+        <Image imageSource={imageSource} />
         <div style={headerStyle}>
-          <Header text={headerText}/>
+          <Header text={headerText} />
         </div>
       </div>
     )
