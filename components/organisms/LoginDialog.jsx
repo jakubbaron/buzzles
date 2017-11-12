@@ -26,13 +26,12 @@ export default class LoginDialog extends React.Component {
   };
 
   render() {
-    const { buttons } = this.props;
-    const { text } = this.props;
+    const { buttons, text, mainButtonClass } = this.props;
     // make a login window here
     const actions = [
       <a href="#" className="btn btn-full"
         onClick={this.handleClose.bind(this)}>
-        {buttons[2].text}
+        {buttons[0].text}
       </a>, <br />,
       <a href="#" className="btn btn-ghost"
         onClick={this.handleClose.bind(this)}>
@@ -45,11 +44,12 @@ export default class LoginDialog extends React.Component {
       marginTop: '0px',
       paddingBottom: '30px',
     };
+    const buttonClass = "btn " + mainButtonClass;
 
 
     return (
       <div>
-        <a href="#" className="btn btn-full" onClick={this.handleOpen.bind(this)}>{buttons[0].text}</a>
+        <a href="#" className={buttonClass} onClick={this.handleOpen.bind(this)}>{buttons[0].text}</a>
         <Dialog
           title={text}
           actions={actions}

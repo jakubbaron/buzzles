@@ -19,12 +19,18 @@ export default class Profile extends Component {
       },
     });
 
-    const text = "Please enter your credentials";
-    const buttons = [
+    const loginText = "Please enter your credentials";
+    const loginButtons = [
       { text: "Login" },
       { text: "Cancel" },
-      { text: "Login" },
     ];
+    const signupText = "Please enter your details";
+    const signupButtons = [
+      { text: "Sign Up!" },
+      { text: "Cancel" },
+    ];
+    const loginClass = "btn-full";
+    const signupClass = "btn-ghost";
     const subpageName = "Profile";
     return (
       <div>
@@ -33,9 +39,9 @@ export default class Profile extends Component {
           <div className="buzzles-text-box">
             <h1>Buzzles!</h1>
             <MuiThemeProvider muiTheme={DialogTheme}>
-              <LoginDialog buttons={buttons} text={text} />
+              <LoginDialog buttons={loginButtons} mainButtonClass={loginClass} text={loginText} />
+              <LoginDialog buttons={signupButtons} mainButtonClass={signupClass} text={signupText} />
             </MuiThemeProvider>
-            <a href="#" className="btn btn-ghost">Sing Up!</a>
           </div>
         </header>
       </div>
