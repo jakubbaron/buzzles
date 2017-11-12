@@ -6,22 +6,28 @@ import PropTypes from 'prop-types';
 class Activity extends Component {
   render() {
     const activityStyle = {
-      marginTop: '20px',
-      paddingTop: '10px',
+      margin: '10px',
     }
 
     const { name, description, imageSource } = this.props.activity;
-    const text = name;
+    const descriptionStyle = {
+      height: '7.8em', // that's one line, 2em for 2 lines, etc...
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+    };
 
     return (
+      
       <div className="padding" >
-        <div className="row">
-          <div className="col-sm-4" style={activityStyle}>
+        <div className="row vertical-align" 
+          style={activityStyle}>
+          <div className="col-xs-4 col-sm-4 col-md-offset-2 col-md-2 col-lg-offset-2 col-lg-2">
             <ImageWithCaption
               imageSource={imageSource}
-              headerText={text}/>
+              headerText={name}/>
           </div>
-          <div className="col-sm-8">
+          <div className="col-xs-8 col-sm-8 col-md-6 col-lg-6"
+            style={descriptionStyle}>
             <Description text={description} />
           </div>
         </div>
