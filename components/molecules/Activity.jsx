@@ -17,7 +17,7 @@ class Activity extends Component {
 
     const { name, description, imageSource } = this.props.activity;
     const descriptionStyle = {
-      height: '7.8em', // that's one line, 2em for 2 lines, etc...
+      height: '7.75em', // that's one line, 2em for 2 lines, etc...
       overflow: 'hidden',
       textOverflow: 'ellipsis',
 
@@ -36,14 +36,16 @@ class Activity extends Component {
           <Paper zDepth={1}>
             <div className="row vertical-align"
               style={activityStyle}>
-              <div className="col-xs-4 col-sm-3 col-md-offset-3 col-md-3 col-lg-offset-2 col-lg-2">
+              <div className="col-xs-4 col-sm-4 col-md-offset-2 col-md-2 col-lg-offset-2 col-lg-2">
                 <ImageWithCaption
                   imageSource={imageSource}
                   headerText={name} />
               </div>
-              <div className="col-xs-8 col-sm-6 col-md-6 col-lg-6"
+              <div className="col-xs-8 col-sm-8 col-md-6 col-lg-6"
                 style={descriptionStyle}>
                 <Description text={description} />
+              </div>
+              <div className="col-md-2 col-lg-2">
               </div>
             </div>
           </Paper>
