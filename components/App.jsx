@@ -32,19 +32,18 @@ class App extends Component {
     });
     return (
       <Router>
-        <div>
-          <footer>
-            <MuiThemeProvider muiTheme={muiTheme}>
-              <MenuBar />
-            </MuiThemeProvider>
-          </footer>
-          <Route exact path="/" component={Discover} />
-          <Route path="/discover" component={Discover} />
-          <Route path="/search" component={Search} />
-          <Route path="/subscriptions" component={Subscriptions} />
-          <Route path="/profile" component={Profile} />
+          <div className="container-fluid container-full">
+          <MuiThemeProvider muiTheme={muiTheme}>
+            <MenuBar />
+          </MuiThemeProvider>
+          <div>
+            <Route exact path="/" component={Discover} />
+            <Route path="/discover" component={Discover} />
+            <Route path="/search" component={Search} />
+            <Route path="/subscriptions" component={Subscriptions} />
+            <Route path="/profile" component={Profile} />
+          </div>
         </div>
-
       </Router >
     );
   }

@@ -30,7 +30,7 @@ class MenuBar extends Component {
     const searchIcon = <IconSearch />;
     const bookmarkIcon = <IconBookmarkBorder />;
     return (
-      <div>
+      <div className="navbar navbar-fixed-bottom">
         <Paper zDepth={1}>
           <BottomNavigation selectedIndex={this.state.selectedIndex}>
             <BottomNavigationItem

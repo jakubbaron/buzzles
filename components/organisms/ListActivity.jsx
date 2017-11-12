@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
-import Description from '../atoms/Description.jsx'
-import Image from '../atoms/Image.jsx'
-import Header from '../atoms/Header.jsx'
+import Activity from '../molecules/Activity.jsx';
 
+import PropTypes from 'prop-types';
+/* TODO:
+
+*/
 class ListActivity extends Component {
   render() {
+    const { activities } = this.props;
+    const activityList = activities.map(val => {
+      return <Activity key={val.id} activity={val} />
+    });
     return (
       <div>
-        <Header
-          {...this.props} />
-        <Image
-          {...this.props} />
-        <Description
-          {...this.props} />
+        {activityList}
       </div>
     )
   }
 }
 
 ListActivity.propTypes = {
-  headerText: React.PropTypes.object.isRequired,
-  imageSource: React.PropTypes.object.isRequired,
-  description: React.PropTypes.object.isRequired
-}
+  activities: PropTypes.array.isRequired,
+};
 export default ListActivity;

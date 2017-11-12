@@ -1,23 +1,26 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Header extends Component {
+class HeaderSubpage extends Component {
   render() {
     const { text } = this.props;
-    const headerStyle = {
+    const HeaderSubpageStyle = {
+
       textAlign: 'center',
-      fontSize: '175%',
+      fontSize: '300%',
       fontWeight: '500',
+      color: '#00ACC1',
+      textTransform: 'uppercase',
     }
     return (
-      <div style={headerStyle}>
+      <div style={HeaderSubpageStyle}>
         <p>{text}</p>
       </div>
     )
   }
 }
 
-Header.propTypes = {
+HeaderSubpage.propTypes = {
   text: PropTypes.string.isRequired,
 }
-export default Header;
+export default HeaderSubpage;

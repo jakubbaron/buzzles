@@ -3,8 +3,15 @@ import PropTypes from 'prop-types';
 
 class Description extends Component {
   render() {
+    const descriptionStyle = {
+      lineHeight: 1.40,
+      fontWeight: 300,
+      backgroundColor: '#FFF8E1',
+      textAlign: 'justify',
+      padding: 10,
+    }
     return (
-      <div>
+      <div style={descriptionStyle}>
         <p>{this.props.text}</p>
       </div>
     )
