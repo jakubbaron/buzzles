@@ -3,16 +3,18 @@ import PropTypes from 'prop-types';
 
 class Image extends Component {
   render() {
-    const { imageSource, imageStyle } = this.props;
+    const { imageSource } = this.props;
+    const imageStyle = {
+      margin: '10px',
+    }
     return (
-      <img src={imageSource} className="img-responsive center" />
+      <img src={imageSource} className="img-responsive center" style={imageStyle} />
     )
   }
 }
 
 Image.propTypes = {
   imageSource: PropTypes.string.isRequired,
-  imageStyle: PropTypes.object
 };
 
 export default Image;

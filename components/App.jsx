@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MenuBar from './organisms/MenuBar.jsx';
-import { white, white500, amber200, grey700 } from 'material-ui/styles/colors'
+import { white, white500, amber100, amber200, grey700 } from 'material-ui/styles/colors'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {
@@ -24,7 +24,7 @@ class App extends Component {
     const muiTheme = getMuiTheme({
       palette: {
         textColor: grey700,
-        canvasColor: amber200,
+        canvasColor: amber100,
       },
       appBar: {
         height: 100,
@@ -32,18 +32,20 @@ class App extends Component {
     });
     return (
       <Router>
+        <MuiThemeProvider muiTheme={muiTheme}>
           <div className="container-fluid container-full">
-          <MuiThemeProvider muiTheme={muiTheme}>
+
             <MenuBar />
-          </MuiThemeProvider>
-          <div>
-            <Route exact path="/" component={Discover} />
-            <Route path="/discover" component={Discover} />
-            <Route path="/search" component={Search} />
-            <Route path="/subscriptions" component={Subscriptions} />
-            <Route path="/profile" component={Profile} />
+
+            <div>
+              <Route exact path="/" component={Discover} />
+              <Route path="/discover" component={Discover} />
+              <Route path="/search" component={Search} />
+              <Route path="/subscriptions" component={Subscriptions} />
+              <Route path="/profile" component={Profile} />
+            </div>
           </div>
-        </div>
+        </MuiThemeProvider>
       </Router >
     );
   }
