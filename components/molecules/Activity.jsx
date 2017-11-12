@@ -3,6 +3,10 @@ import Description from '../atoms/Description.jsx'
 import ImageWithCaption from '../molecules/ImageWithCaption.jsx';
 import PropTypes from 'prop-types';
 
+/*
+TODO:
+-make the image smaller when displaying on the smaller screen, what's happening now it's freaking ridiculous
+*/
 class Activity extends Component {
   render() {
     const activityStyle = {
