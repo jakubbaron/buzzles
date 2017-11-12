@@ -11,10 +11,6 @@ class ImageWithCaption extends Component {
       imageStyle,
       headerText 
     } = this.props;
-    const style = {
-      position: 'relative',
-      display: 'inline-block',
-    }
     const headerStyle = {
       position: 'absolute',
       bottom: '0px',
@@ -23,7 +19,7 @@ class ImageWithCaption extends Component {
       backgroundColor: '#bebebe transparent',
     }
     return (
-      <div style={style}>
+      <div>
         <Image imageSource={imageSource}/>
         <div style={headerStyle}>
           <Header text={headerText}/>
@@ -34,9 +30,9 @@ class ImageWithCaption extends Component {
 }
 
 ImageWithCaption.propTypes = {
-  imageSource: PropTypes.object.isRequired,
+  imageSource: PropTypes.string.isRequired,
   imageStyle: PropTypes.object,
-  headerText: PropTypes.object.isRequired
+  headerText: PropTypes.string.isRequired
 };
 
 export default ImageWithCaption;

@@ -23,7 +23,7 @@ class Discover extends Component {
     const subpageName = "Discover";
     return (
       <div className="padding">
-        <div className="row" style={discoverStyle}>
+        <div style={discoverStyle}>
           <HeaderSubpage text={subpageName}/>
           <ListActivity {...this.state} />
         </div>

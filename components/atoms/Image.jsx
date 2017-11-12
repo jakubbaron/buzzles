@@ -5,7 +5,7 @@ class Image extends Component {
   render() {
     const { imageSource, imageStyle } = this.props;
     return (
-      <img src={imageSource} className="img-responsive center-block" />
+      <img src={imageSource} className="img-responsive center" />
     )
   }
 }
