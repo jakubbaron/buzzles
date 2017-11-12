@@ -2,7 +2,7 @@ import React from 'react';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
-
+import TextField from 'material-ui/TextField';
 /**
  * Dialog with action buttons. The actions are passed in as an array of React objects,
  * in this example [FlatButtons](/#/components/flat-button).
@@ -30,17 +30,22 @@ export default class LoginDialog extends React.Component {
     const { text } = this.props;
     // make a login window here
     const actions = [
-      <FlatButton
-        label={buttons[1].text}
-        primary={true}
-        onClick={this.handleClose.bind(this)}
-      />,
-      <FlatButton
-        label={buttons[2].text}
-        primary={true}
-        onClick={this.handleClose.bind(this)}
-      />,
+      <a href="#" className="btn btn-full"
+        onClick={this.handleClose.bind(this)}>
+        {buttons[2].text}
+      </a>, <br />,
+      <a href="#" className="btn btn-ghost"
+        onClick={this.handleClose.bind(this)}>
+        {buttons[1].text}
+      </a>,
     ];
+    const actionsStyle = {
+      backgroundColor: '#FFF8E1',
+      textAlign: 'center',
+      marginTop: '0px',
+      paddingBottom: '30px',
+    };
+
 
     return (
       <div>
@@ -51,10 +56,24 @@ export default class LoginDialog extends React.Component {
           modal={false}
           open={this.state.open}
           onRequestClose={this.handleClose.bind(this)}
+          bodyClassName="login-form"
+          titleClassName="login-form-header"
+          actionsContainerStyle={actionsStyle}
         >
-
+          <TextField
+            floatingLabelText="Login"
+            hintText=""
+          />
+          <br />
+          <TextField
+            hintText=""
+            floatingLabelText="Password"
+            type="password"
+          />
+          <br />
+          <a href='#' className="btn-none">Forgot password...</a>
         </Dialog>
-      </div>
+      </div >
     );
   }
 }

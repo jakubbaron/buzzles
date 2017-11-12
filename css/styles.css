@@ -52,10 +52,6 @@ h1 {
   padding: 10px 30px;
   font-weight: 300;
   text-decoration: none;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   /* background-color: #26C6DA; */
   border-radius: 200px;
   width: 70%;
@@ -96,6 +92,46 @@ h1 {
   color: #fff;
 }
 
+.btn-none:hover,
+.btn-none:active {
+  border-bottom: 1px solid #00ACC1;
+  color:#26C6DA;
+  background-color: #FFF8E1;
+  border-radius: 0px;
+}
+
+.btn-none:link,
+.btn-none:visited {
+  /* border-bottom: 1px solid #00ACC1; */
+  display: inline-block;
+  padding: 5px 0px;
+  margin-top:20px;
+  text-decoration: none;
+  font-size:80%;
+  border-bottom: 1px solid #FFF8E1;
+  color:#9E9E9E;
+  background-color: #FFF8E1;
+  border-radius: 0px;
+  transition: background-color 0.3s, border 0.3s, color 0.3s;  
+}
+
+.btn-none:hover,
+.btn-none:active {
+  border-bottom: 1px solid #00ACC1;
+  color:#26C6DA;
+  background-color: #FFF8E1;
+  border-radius: 0px;
+}
+
+.btn-form {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: #26C6DA; */
+  border-radius: 200px;
+  width: 70%;
+  max-width: 300px;
+}
 
 /* ------------------------------------------ */
 /* HEADER */
@@ -111,12 +147,17 @@ header {
  
  .buzzles-text-box {
    position: absolute;
-   /* width: 1140px; */
+   width: 1140px; 
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%); 
+   text-align: center;
  
  }
+
+.center-contaier {
+  background-clip: '#fff';
+}
 
 /* ------------------------------------------ */
 /* FOOTER */
@@ -127,6 +168,7 @@ footer {
   position: absolute;
   bottom: 0;
 }
+
 .main-nav {
   /* float: center; */
   list-style: none;
@@ -141,7 +183,37 @@ footer {
   margin-left: 20px;
   margin-right: 20px;
 }
+
 .main-nav li a {
   text-decoration: none;
   color: rgb(131, 131, 131);
+}
+
+/* ------------------------------------------ */
+/* Login Form */
+/* ------------------------------------------ */
+
+.login-form {
+  background-color: #FFF8E1;
+  text-align: center;
+}
+
+.login-form-header {
+  /* font-family: 'Gloria Hallelujah'; */
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 20%;
+  font-weight: 300;
+  /* text-transform: uppercase; */
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  background-color: #FFF8E1;
+  text-align: center;
+}
+
+.login-form-actions {
+  background-color: #FFF8E1; 
+  text-align: center;
+  width: 100%;
 }

@@ -26,12 +26,15 @@ export default class Profile extends Component {
     return (
       <div>
         <header>
+
           <div className="buzzles-text-box">
             <h1>Buzzles!</h1>
-            <MuiThemeProvider muiTheme={DialogTheme}>
-              <LoginDialog buttons={buttons} text={text} />
-            </MuiThemeProvider>
-            <a href="#" className="btn btn-ghost">Sing Up!</a>
+            <div className="center-container">
+              <MuiThemeProvider muiTheme={DialogTheme}>
+                <LoginDialog buttons={buttons} text={text} />
+              </MuiThemeProvider>
+              <a href="#" className="btn btn-ghost">Sing Up!</a>
+            </div>
           </div>
         </header>
       </div>
