@@ -5,10 +5,9 @@ class HeaderSubpage extends Component {
   render() {
     const { text } = this.props;
     const HeaderSubpageStyle = {
-
       textAlign: 'center',
       fontSize: '300%',
-      fontWeight: '500',
+      fontWeight: '600',
       color: '#00ACC1',
       textTransform: 'uppercase',
     }

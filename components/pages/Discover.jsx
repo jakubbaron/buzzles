@@ -4,6 +4,8 @@ import ListActivity from '../organisms/ListActivity.jsx';
 import HeaderSubpage from '../atoms/HeaderSubpage.jsx';
 import events from '../../mock_events.js';
 
+//TODO: format two paragraphs, they look like shiet
+
 class Discover extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +22,10 @@ class Discover extends Component {
     return (
       <div className="padding">
         <div style={discoverStyle}>
+
           <HeaderSubpage text={subpageName} />
+          <p>This weekend in your area...</p>
+          <p><i>  Recommended for Donald:</i></p>
           <ListActivity {...this.state} />
         </div>
       </div>
