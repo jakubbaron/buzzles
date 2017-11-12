@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Description from '../atoms'
-import Image from '../atoms'
-import Header from '../atoms'
+import Description from '../atoms/Description.jsx'
+import Image from '../atoms/Image.jsx'
+import Header from '../atoms/Header.jsx'
 
 class ListActivity extends Component {
   render() {
     return (
       <div>
-        <Header 
+        <Header
           {...this.props} />
         <Image
           {...this.props} />
