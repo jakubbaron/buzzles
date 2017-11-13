@@ -3,10 +3,12 @@ import Header from '../atoms/Header.jsx';
 import Image from '../atoms/Image.jsx';
 
 import PropTypes from 'prop-types';
-/*
-TODO: fix caption on smaller screen, it sucks ballzs
+
+//TODO: fix caption on smaller screen, it sucks ballzs
 //Temp fix applied, but needs better solution
-*/
+//TODO: break text if it's longer than one line
+//TODO: display max 2 lines of header on image
+
 class ImageWithCaption extends Component {
   render() {
     const {
@@ -17,14 +19,15 @@ class ImageWithCaption extends Component {
     const headerStyle = {
       position: 'absolute',
       bottom: '0px',
-      marginLeft: '15px',
       textAlign: 'center',
       backgroundColor: '#bebebe transparent',
     }
-
+    const imageWithCaptionStyle = {
+      margin: '5px'
+    }
 
     return (
-      <div>
+      <div style={imageWithCaptionStyle}>
         <Image imageSource={imageSource} style={imageSource} />
         <div style={headerStyle}>
           <p >{headerText} </p>
