@@ -16,7 +16,7 @@ class Discover extends Component {
 
   render() {
     const discoverStyle = {
-      backgroundColor: '#FFF8E1',
+      // backgroundColor: '#FFF8E1',
     }
     const subpageName = "Discover";
     return (

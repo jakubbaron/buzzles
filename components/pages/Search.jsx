@@ -18,7 +18,7 @@ export default class Search extends Component {
   }
   render() {
     const searchStyle = {
-      backgroundColor: '#FFF8E1',
+      // backgroundColor: '#FFF8E1',
     }
     const subpageName = "Search";
     const searchFieldStyle = {

@@ -39,7 +39,7 @@ export default class LoginDialog extends React.Component {
       </a>,
     ];
     const actionsStyle = {
-      backgroundColor: '#FFF8E1',
+      // backgroundColor: '#FFF8E1',
       textAlign: 'center',
       marginTop: '0px',
       paddingBottom: '30px',
@@ -50,6 +50,7 @@ export default class LoginDialog extends React.Component {
     return (
       <div>
         <a href="#" className={buttonClass} onClick={this.handleOpen.bind(this)}>{buttons[0].text}</a>
+
         <Dialog
           title={text}
           actions={actions}
