@@ -9,6 +9,9 @@ import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
 import IconSearch from 'material-ui/svg-icons/action/search';
 import IconPermIdentity from 'material-ui/svg-icons/action/perm-identity';
 import { withRouter } from 'react-router-dom';
+import { white, white500, amber100, amber200, grey700 } from 'material-ui/styles/colors'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 class MenuBar extends Component {
   constructor(props) {
@@ -29,32 +32,43 @@ class MenuBar extends Component {
     const nearbyIcon = <IconLocationOn />;
     const searchIcon = <IconSearch />;
     const bookmarkIcon = <IconBookmarkBorder />;
+    const muiTheme = getMuiTheme({
+      palette: {
+        textColor: grey700,
+        canvasColor: amber200,
+      },
+      appBar: {
+        height: 100,
+      },
+    });
     return (
       <div className="navbar navbar-fixed-bottom">
-        <Paper zDepth={1}>
-          <BottomNavigation selectedIndex={this.state.selectedIndex}>
-            <BottomNavigationItem
-              label="Discover"
-              icon={nearbyIcon}
-              onClick={() => this.select(0, '/discover')}
-            />
-            <BottomNavigationItem
-              label="Search"
-              icon={searchIcon}
-              onClick={() => this.select(1, '/search')}
-            />
-            <BottomNavigationItem
-              label="Subscriptions"
-              icon={bookmarkIcon}
-              onClick={() => this.select(2, '/subscriptions')}
-            />
-            <BottomNavigationItem
-              label="Profile"
-              icon={profileIcon}
-              onClick={() => this.select(3, '/profile')}
-            />
-          </BottomNavigation>
-        </Paper>
+        <MuiThemeProvider muiTheme={muiTheme}>
+          <Paper zDepth={1}>
+            <BottomNavigation selectedIndex={this.state.selectedIndex}>
+              <BottomNavigationItem
+                label="Discover"
+                icon={nearbyIcon}
+                onClick={() => this.select(0, '/discover')}
+              />
+              <BottomNavigationItem
+                label="Search"
+                icon={searchIcon}
+                onClick={() => this.select(1, '/search')}
+              />
+              <BottomNavigationItem
+                label="Subscriptions"
+                icon={bookmarkIcon}
+                onClick={() => this.select(2, '/subscriptions')}
+              />
+              <BottomNavigationItem
+                label="Profile"
+                icon={profileIcon}
+                onClick={() => this.select(3, '/profile')}
+              />
+            </BottomNavigation>
+          </Paper>
+        </MuiThemeProvider>
       </div>
     );
   }

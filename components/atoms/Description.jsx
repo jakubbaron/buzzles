@@ -6,7 +6,6 @@ class Description extends Component {
     const descriptionStyle = {
       lineHeight: 1.40,
       fontWeight: 300,
-      backgroundColor: '#FFF8E1',
       textAlign: 'justify',
       padding: 10,
     }

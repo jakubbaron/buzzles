@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import Description from '../atoms/Description.jsx'
 import ImageWithCaption from '../molecules/ImageWithCaption.jsx';
+import Image from '../atoms/Image.jsx';
 import { white, white500, amber50, amber100, amber300, grey700 } from 'material-ui/styles/colors'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Paper from 'material-ui/Paper';
+import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
+import FlatButton from 'material-ui/FlatButton';
 import PropTypes from 'prop-types';
 
 //TODO: make nicer rectangles on big screen, that would wrap text, not whole width
@@ -33,13 +36,13 @@ class Activity extends Component {
 
       <div className="padding">
         <MuiThemeProvider muiTheme={muiTheme}>
-          <Paper zDepth={1}>
+          <Card zDepth={2}>
+            <CardTitle title={name} subtitle="London" />
             <div className="row vertical-align"
               style={activityStyle}>
               <div className="col-xs-4 col-sm-4 col-md-offset-2 col-md-2 col-lg-offset-2 col-lg-2">
-                <ImageWithCaption
-                  imageSource={imageSource}
-                  headerText={name} />
+                <Image
+                  imageSource={imageSource} />
               </div>
               <div className="col-xs-8 col-sm-8 col-md-6 col-lg-6"
                 style={descriptionStyle}>
@@ -48,7 +51,7 @@ class Activity extends Component {
               <div className="col-md-2 col-lg-2">
               </div>
             </div>
-          </Paper>
+          </Card>
         </MuiThemeProvider>
       </div >
     );

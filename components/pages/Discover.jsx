@@ -5,6 +5,7 @@ import HeaderSubpage from '../atoms/HeaderSubpage.jsx';
 import events from '../../mock_events.js';
 
 //TODO: format two paragraphs, they look like shiet
+//TODO: make it tiles rather than grid, explore things by categories?
 
 class Discover extends Component {
   constructor(props) {

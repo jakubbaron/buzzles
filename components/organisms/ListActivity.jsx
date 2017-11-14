@@ -3,6 +3,8 @@ import Activity from '../molecules/Activity.jsx';
 
 import PropTypes from 'prop-types';
 
+//TODO: probably move to this from bootstrap 
+//http://www.material-ui.com/#/components/grid-list
 class ListActivity extends Component {
   render() {
     const { activities } = this.props;
