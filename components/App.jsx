@@ -19,8 +19,6 @@ class App extends Component {
     this.state = {
 
     };
-  }
-  render() {
     const muiTheme = getMuiTheme({
       palette: {
         textColor: grey700,
@@ -30,9 +28,11 @@ class App extends Component {
         height: 100,
       },
     });
+  }
+  render() {
     return (
       <Router>
-        <MuiThemeProvider muiTheme={muiTheme}>
+        <MuiThemeProvider muiTheme={this.muiTheme}>
           <div className="container-fluid container-full">
 
             <MenuBar />
